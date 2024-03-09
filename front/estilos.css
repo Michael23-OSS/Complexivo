@@ -1,0 +1,172 @@
+/* Estilos para el header */
+.header {
+    background-color: rgb(131, 124, 124);
+    padding: 0.2cm 0; /* Espaciado de 1cm arriba y abajo */
+    display: flex; /* Para alinear el logo y el título */
+    align-items: center; /* Para centrar verticalmente */
+    text-align: center;
+}
+
+.logo {
+    position: relative; /* Posición relativa para poder posicionar la línea */
+}
+
+.logo img {
+    width: 158px; /* Ancho del logo */
+    margin-right: 1cm; /* Margen a la derecha del logo */
+}
+
+.logo::after {
+    content: ""; /* Añadir un contenido pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0;
+    right: 2px; /* Distancia desde el borde derecho del logo */
+    height: 100%; /* Altura igual a la altura del logo */
+    border-right: 1px solid black; /* Línea vertical a la derecha */
+}
+
+
+/* Estilos para el footer */
+.footer {
+    background-color: rgb(131, 124, 124);
+    color: rgb(43, 40, 40);
+    padding: 0.2cm 0; /* Espaciado de 0.2cm arriba y abajo */
+    text-align: center;
+    position: fixed; /* Fijar posición */
+    bottom: 0; /* Colocar en la parte inferior */
+    width: 100%; /* Ocupar todo el ancho */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(98, 189, 201);
+}
+
+
+.div-titulo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-titulo h1 {
+    font-weight: 300;
+}
+
+.contenedor {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
+
+/* ESTILOS FORMULARIO */
+.contenedor .div-formulario {
+    width: 90%; /* Modificado para que ocupe el 90% del contenedor */
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+    margin: 15px 15px;
+    background-color: rgb(58, 59, 58);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor .div-formulario h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 2em;
+    color: rgb(245, 245, 245);
+}
+
+.contenedor .div-formulario form {
+    width: 100%;
+    padding: 20px; /* Añadido un relleno interno */
+}
+
+.contenedor .div-formulario form input,
+.contenedor .div-formulario form button {
+    width: 100%; /* Modificado para que ocupe todo el ancho disponible */
+    padding: 10px 10px;
+    margin: 10px 0; /* Modificado para que tenga margen superior e inferior */
+    background-color: rgb(180, 198, 221);
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
+}
+
+/* ESTILOS LISTADO */
+.contenedor .div-listado {
+    width: 70%;
+    height: calc(100% - 100px);
+    margin: 15px 15px;
+    background-color: rgb(65, 68, 68);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor .div-listado h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 2em;
+    color: rgb(252, 252, 252);
+}
+
+/* Estilos para la tabla */
+.contenedor .div-clientes table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que los bordes redondeados se vean correctamente */
+    background-color: rgb(98, 189, 201); /* Fondo celeste */
+}
+
+/* Estilos para las filas */
+.contenedor .div-clientes tr {
+    border-bottom: 1px solid #fff; /* Borde inferior para separar las filas */
+}
+
+/* Estilos para las celdas */
+.contenedor .div-clientes th,
+.contenedor .div-clientes td {
+    padding: 10px;
+    text-align: left;
+    color: #000000;
+}
+
+/* Estilos para la primera fila (cabecera) */
+.contenedor .div-clientes thead th {
+    background-color: rgb(64, 129, 129); /* Color de fondo oscuro para la cabecera */
+    border-bottom: 2px solid #fff; /* Borde inferior más grueso */
+}
+
+/* Estilos para las celdas de acciones (botones) */
+.contenedor .div-clientes td button {
+    padding: 5px 10px;
+    border: none;
+    margin: 0 5px;
+    color: rgb(8, 7, 7);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos adicionales para los botones */
+.contenedor .div-clientes td button.btnEditar {
+    background-color: green;
+}
+
+.contenedor .div-clientes td button.btnEliminar {
+    background-color: red;
+}
